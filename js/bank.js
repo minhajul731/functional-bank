@@ -34,13 +34,19 @@ function totlaBalance(inputValue, isAdd) {
 
 document.getElementById('deposite-button').addEventListener('click', function () {
     const inputDeposite = getInputValue('deposite-field');
-    updateTotalField('deposit-total', inputDeposite);
-    totlaBalance(inputDeposite, true);
+    // error handle
+    if (inputDeposite > 0) {
+        updateTotalField('deposit-total', inputDeposite);
+        totlaBalance(inputDeposite, true);
+    }
 });
 
 
 document.getElementById('withdraw-button').addEventListener('click', function () {
     const inputWithdraw = getInputValue('dwithdraw-field');
-    updateTotalField('withdraw-total', inputWithdraw);
-    totlaBalance(inputWithdraw, false);
+    // error handle
+    if (inputWithdraw > 0) {
+        updateTotalField('withdraw-total', inputWithdraw);
+        totlaBalance(inputWithdraw, false);
+    }
 });
