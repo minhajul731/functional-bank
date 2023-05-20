@@ -5,30 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Calculator</title>
+    <title>Banking</title>
     <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <header>
-        <h1 class="text-4xl font-semibold text-center mt-4">Welcome to <span class="text-purple-700">Bank!</span></h1>
+        <h1 class="text-4xl font-semibold text-center mt-4">Let's get some <span class="text-purple-700">Money!</span>
+        </h1>
     </header>
-    <main>
-        <section class="bg-green-100 w-2/4 mx-auto mt-8 p-6 rounded">
-            <h3 class="text-3xl mb-4">Please Login</h3>
-            <div>
-                <input type="email" name="" id="user-email" placeholder="your email"
-                    class="border border-gray-300 rounded px-2 block w-2/4 mb-2 py-1">
-                <input type="password" name="" id="user-password" placeholder="password"
-                    class="border border-gray-300 rounded px-2 block w-2/4 mb-2 py-1">
-                <button id="submit-button" class="bg-amber-500 text-white px-4 py-1 rounded font-bold">Submit</button>
-                <p id="error-message" class="text-red-600 mt-2 text-center font-bold"></p>
+    <main class="w-3/4 mx-auto">
+        <!-- deposite and balance display -->
+        <section>
+            <div class="grid grid-cols-3 gap-4 mt-12">
+                <div class="bg-sky-400 p-10 rounded-lg">
+                    <h3 class="text-3xl text-white mb-2">Deposite</h3>
+                    <h4 class="text-4xl font-semibold text-white">Tk <span id="deposit-total">00</span></h4>
+                </div>
+                <div class="bg-yellow-400 p-10 rounded-lg">
+                    <h3 class="text-3xl text-white mb-2">Withdraw</h3>
+                    <h4 class="text-4xl font-semibold text-white">Tk <span id="withdraw-total">00</span></h4>
+                </div>
+                <div class="bg-green-400 p-10 rounded-lg">
+                    <h3 class="text-3xl text-white mb-2">Balance</h3>
+                    <h4 class="text-4xl font-semibold text-white">Tk <span id="balance-total">2050</span></h4>
+                </div>
+            </div>
+        </section>
+        <!-- add ammount and remove ammount -->
+        <section>
+            <div class="grid grid-cols-2 gap-4 mt-10">
+                <div class="bg-indigo-100 p-10 rounded-lg">
+                    <h3 class="text-2xl mb-2">Please Deposite</h3>
+                    <input type="number" name="" id="deposite-field" placeholder="Deposite Ammount (৳)"
+                        class="border border-gray-300 rounded px-2 block w-2/4 mb-2 py-1">
+                    <button id="deposite-button"
+                        class="bg-purple-500 text-white px-4 py-1 rounded font-semibold">Deposite</button>
+                </div>
+                <div class="bg-fuchsia-100 p-10 rounded-lg">
+                    <h3 class="text-2xl mb-2">Please Withdraw</h3>
+                    <input type="number" name="" id="withdraw-field" placeholder="Withdraw Ammount (৳)"
+                        class="border border-gray-300 rounded px-2 block w-2/4 mb-2 py-1">
+                    <button id="withdraw-button"
+                        class="bg-purple-500 text-white px-4 py-1 rounded font-semibold">Withdraw</button>
+                    <small id="balance-error-handle" class="text-red-700 ml-2"></small>
+                </div>
             </div>
         </section>
     </main>
 
-    <script src="js/login.js"></script>
+    <script src="js/bank.js"></script>
 </body>
 
 </html>
